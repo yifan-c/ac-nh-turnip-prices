@@ -666,3 +666,5 @@ function analyze_possibilities(sell_prices, first_buy, previous_pattern) {
 
   return generated_possibilities;
 }
+
+exports.analyze_possibilities = analyze_possibilities;

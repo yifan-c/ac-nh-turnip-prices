@@ -34,7 +34,7 @@ function get_local_date_string(date) {
 }
 
 if (!local_storage_exist) {
-  fs.mkdirSync(local_storage_dir);
+  !fs.existsSync(local_storage_dir) && fs.mkdirSync(local_storage_dir);
   fs.writeFileSync(price_history_of_week_file_name, csv_header + csv_empty_body, 'utf8');
 }
 

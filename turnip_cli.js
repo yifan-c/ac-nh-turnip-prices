@@ -102,7 +102,7 @@ program
 
     // compute the index corresponding to the log moment
     const day_of_week = now.getDay();
-    const is_pm = now.getHours() > 12;
+    const is_pm = now.getHours() >= 12;
     const index = day_of_week * 2 + (is_pm ? 1 : 0);
 
     // update the price of the moment
